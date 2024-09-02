@@ -1,0 +1,138 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f3e7e9, #e3eeff);
+    color: #333;
+}
+
+.stopwatch {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 5vw 5vh;
+    border-radius: 25px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.stopwatch:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.4);
+}
+
+h1 {
+    font-size: 5vw;
+    margin-bottom: 5vh;
+    letter-spacing: 1px;
+    color: #6e45e2;
+}
+
+#display {
+    font-size: 8vw;
+    margin-bottom: 5vh;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #6e45e2;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 5vh;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 4vw;
+    border: none;
+    border-radius: 30px;
+    background: #ffd1dc;
+    color: #6e45e2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #ff94c2;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(255, 148, 194, 0.6);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button#resetBtn {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+button#resetBtn:hover {
+    background-color: #ff8a80;
+    box-shadow: 0 8px 20px rgba(255, 111, 97, 0.6);
+}
+
+#laps {
+    list-style: none;
+    padding: 0;
+    margin-top: 5vh;
+    max-height: 200px;
+    overflow-y: auto;
+    color: #333;
+}
+
+#laps li {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 15px;
+    font-size: 4vw;
+    text-align: left;
+}
+
+/* Media Query for Larger Screens */
+@media screen and (min-width: 768px) {
+    .stopwatch {
+        padding: 30px;
+        width: 350px;
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #display {
+        font-size: 3em;
+    }
+
+    .buttons {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+
+    #laps li {
+        font-size: 1.2em;
+    }
+}
